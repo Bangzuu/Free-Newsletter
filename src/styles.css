@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,700..900,50,1&family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(255, 42, 184, 0.45);
+  color: white;
+}
+
+.text-slate-650 {
+  color: rgb(71 85 105);
+}
+
+.mobile-hero-title-replacement {
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 76% 52%, rgba(144, 28, 116, 0.28), transparent 54%),
+    linear-gradient(180deg, rgba(7, 4, 34, 0.98), rgba(13, 5, 48, 0.96) 58%, rgba(22, 7, 61, 0.94));
+  box-shadow: 0 0 26px rgba(8, 3, 36, 0.82);
+}
