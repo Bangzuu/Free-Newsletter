@@ -31,6 +31,28 @@ body {
   color: rgb(71 85 105);
 }
 
+.hero-left-visual {
+  width: 100%;
+  max-width: min(92vw, 560px);
+  max-height: 44vh;
+  object-fit: contain;
+  filter: drop-shadow(0 24px 62px rgba(255, 42, 184, 0.22));
+}
+
+@media (min-width: 640px) {
+  .hero-left-visual {
+    max-width: min(86vw, 620px);
+    max-height: 58vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-left-visual {
+    max-width: 670px;
+    max-height: 76vh;
+  }
+}
+
 .mobile-hero-title-replacement {
   border-radius: 18px;
   background:

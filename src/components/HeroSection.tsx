@@ -1,89 +1,87 @@
-import { ArrowRight, Mail, Zap } from "lucide-react";
+import { ArrowRight, Mail, ShieldCheck, UsersRound, Zap } from "lucide-react";
 
 export function HeroSection() {
   return (
-    <>
-      <section className="relative isolate hidden min-h-screen overflow-hidden bg-[#08041c] lg:block">
-        <div className="relative aspect-[1672/941] w-full">
+    <section className="relative isolate min-h-screen overflow-hidden bg-[#08041c] px-4 py-8 text-white sm:px-8 lg:px-10 lg:py-8">
+      <img
+        src="/hero-tropical-sunset.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 -z-30 h-full w-full object-cover object-center"
+      />
+      <div className="absolute inset-0 -z-20 bg-[linear-gradient(90deg,rgba(5,3,26,0.72),rgba(14,4,39,0.34)_46%,rgba(6,2,24,0.6)),linear-gradient(180deg,rgba(4,2,22,0.14),rgba(6,2,24,0.76))]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_76%_34%,rgba(255,42,184,0.2),transparent_34%)]" />
+
+      <div className="mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-[1210px] items-center gap-7 lg:grid-cols-[minmax(0,1.08fr)_minmax(430px,0.92fr)] lg:gap-8 xl:gap-10">
+        <div className="relative mx-auto flex w-full max-w-[620px] items-center justify-center lg:ml-auto lg:mr-0 lg:max-w-[670px]">
           <img
-            src="/reference-hero.png"
-            alt="Trippin with George newsletter landing page"
-            className="absolute inset-0 h-full w-full object-fill"
+            src="/hero-left-visual.png"
+            alt="Creator's Edge travel newsletter preview"
+            className="hero-left-visual"
           />
+        </div>
+
+        <div className="mx-auto w-full max-w-[520px] rounded-[1.35rem] border border-white/14 bg-[#12042f]/28 p-5 text-center shadow-[0_20px_72px_rgba(6,2,24,0.3)] backdrop-blur-sm sm:p-7 lg:mx-0 lg:p-7 lg:text-left">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-fuchsia-400/90 bg-[#12042f]/70 px-4 py-2 text-xs font-black text-fuchsia-300 shadow-[0_0_16px_rgba(255,42,184,0.36)] backdrop-blur-md sm:text-sm">
+            <Zap size={15} />
+            Free Newsletter
+          </div>
+
+          <h1 className="mx-auto max-w-[430px] font-serif text-[clamp(2.15rem,9vw,3.2rem)] font-black leading-[1.02] tracking-normal text-white drop-shadow-[0_4px_12px_rgba(4,0,24,0.78)] sm:max-w-[520px] sm:text-[clamp(3rem,5.2vw,4.1rem)] lg:mx-0 lg:max-w-[500px] lg:text-[clamp(2.75rem,3.05vw,3.65rem)]">
+            Build a life you don&apos;t need to{" "}
+            <span className="relative inline-block">
+              escape from.
+              <span className="absolute -bottom-0.5 left-0 h-1 w-full rounded-full bg-fuchsia-400 shadow-[0_0_12px_rgba(255,42,184,0.85)]" />
+            </span>
+          </h1>
+
+          <p className="mx-auto mt-4 max-w-[470px] text-sm font-semibold leading-6 text-white/90 drop-shadow-[0_2px_10px_rgba(4,0,24,0.7)] sm:text-base sm:leading-7 lg:mx-0">
+            A semi-regular newsletter sharing practical lessons on online business, content creation, AI, travel and what
+            I&apos;m learning along the way.
+          </p>
+
           <form
-            className="group absolute left-[52.95%] top-[60.2%] flex h-[6.1%] w-[33.45%] overflow-hidden rounded-[0.55vw] border border-fuchsia-200/35 bg-white/[0.16] shadow-[0_0_28px_rgba(255,42,184,0.26),0_18px_54px_rgba(31,8,68,0.32)] backdrop-blur-md transition duration-300 hover:border-fuchsia-200/60 hover:bg-white/[0.2] hover:shadow-[0_0_42px_rgba(255,42,184,0.38),0_20px_60px_rgba(31,8,68,0.38)] focus-within:border-fuchsia-100/80 focus-within:bg-white/[0.22] focus-within:shadow-[0_0_54px_rgba(255,42,184,0.48),0_24px_70px_rgba(92,35,180,0.38)]"
+            className="mx-auto mt-5 flex w-full max-w-[470px] flex-col gap-3 sm:flex-row lg:mx-0"
             aria-label="Join the newsletter"
           >
-            <label className="sr-only" htmlFor="desktop-reference-email">
+            <label className="sr-only" htmlFor="hero-email">
               Email address
             </label>
-            <Mail className="pointer-events-none absolute left-[3.4%] top-1/2 z-10 -translate-y-1/2 text-white drop-shadow-[0_0_8px_rgba(255,42,184,0.55)] transition group-focus-within:text-fuchsia-100" size={18} />
-            <input
-              id="desktop-reference-email"
-              type="email"
-              required
-              placeholder="Email address"
-              className="h-full min-w-0 flex-1 bg-transparent pl-[9.5%] pr-3 text-[clamp(0.75rem,1vw,1.05rem)] font-semibold text-white outline-none placeholder:text-white/90 focus:bg-white/5"
-            />
+            <div className="relative min-h-12 flex-1 rounded-md border border-fuchsia-100/45 bg-white/[0.16] shadow-[0_0_20px_rgba(255,42,184,0.22)] backdrop-blur-md transition focus-within:border-fuchsia-100/80 focus-within:bg-white/[0.22] focus-within:shadow-[0_0_30px_rgba(255,42,184,0.38)] sm:min-h-11">
+              <Mail className="pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-white/90 drop-shadow-[0_0_7px_rgba(255,42,184,0.5)]" size={17} />
+              <input
+                id="hero-email"
+                type="email"
+                required
+                placeholder="Email Address"
+                className="h-12 w-full rounded-md bg-transparent pl-11 pr-4 text-base font-semibold text-white outline-none placeholder:text-white/90 sm:h-11 sm:text-sm"
+              />
+            </div>
             <button
               type="submit"
-              className="flex h-full w-[39%] items-center justify-center gap-2 bg-fuchsia-500 text-[clamp(0.7rem,0.92vw,1rem)] font-bold text-white shadow-[0_0_28px_rgba(255,42,184,0.42)] transition hover:bg-fuchsia-400 focus:outline-none focus:ring-2 focus:ring-fuchsia-100"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-fuchsia-500 px-5 text-base font-bold text-white shadow-[0_0_24px_rgba(255,42,184,0.4)] transition hover:bg-fuchsia-400 focus:outline-none focus:ring-2 focus:ring-fuchsia-100 sm:min-h-11 sm:text-sm"
             >
               <span>Join the Newsletter</span>
               <ArrowRight size={16} />
             </button>
           </form>
-        </div>
-      </section>
 
-      <section className="relative isolate overflow-hidden bg-[#08041c] lg:hidden">
-        <div className="relative mx-auto aspect-[474/491] w-full max-w-[640px] overflow-hidden bg-[#08041c]">
-          <img
-            src="/mobile-reference-hero.png"
-            alt="Trippin with George mobile newsletter landing page"
-            className="absolute inset-0 h-full w-full object-fill"
-          />
-          <div className="absolute left-1/2 top-[3.4%] z-20 flex -translate-x-1/2 items-center gap-1 rounded-full border border-fuchsia-400/90 bg-[#12042f]/85 px-[2.6%] py-[0.85%] text-[clamp(0.35rem,1.55vw,0.55rem)] font-black text-fuchsia-300 shadow-[0_0_12px_rgba(255,42,184,0.45)]">
-            <Zap className="h-[1em] w-[1em]" />
-            Free Newsletter
+          <div className="mx-auto mt-5 max-w-[470px] space-y-4 text-left lg:mx-0">
+            <div className="flex gap-3">
+              <UsersRound className="mt-0.5 shrink-0 text-fuchsia-300" size={22} />
+              <p className="text-sm font-semibold leading-6 text-white/90">
+                For aspiring creators, online entrepreneurs and anyone building a life with more freedom.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <ShieldCheck className="mt-0.5 shrink-0 text-fuchsia-300" size={22} />
+              <p className="text-sm font-semibold leading-6 text-white/90">
+                No daily spam. No fake guru bullshit. Just useful ideas when I have something worth sharing.
+              </p>
+            </div>
           </div>
-          <div
-            className="mobile-hero-title-replacement absolute left-[13.5%] top-[6.9%] z-10 grid h-[18%] w-[73%] place-items-center text-center"
-            aria-hidden="true"
-          >
-            <h1 className="font-serif text-[clamp(1.15rem,4.7vw,1.45rem)] font-black leading-[1.02] tracking-normal text-white drop-shadow-[0_2px_7px_rgba(4,0,24,0.72)]">
-              Build a life you don&apos;t need to{" "}
-              <span className="relative inline-block">
-                escape from.
-                <span className="absolute -bottom-0.5 left-0 h-0.5 w-full rounded-full bg-fuchsia-400 shadow-[0_0_10px_rgba(255,42,184,0.8)]" />
-              </span>
-            </h1>
-          </div>
-          <form
-            className="absolute left-[26.2%] top-[33.8%] h-[10.8%] w-[47.5%]"
-            aria-label="Join the newsletter"
-          >
-            <label className="sr-only" htmlFor="mobile-reference-email">
-              Email address
-            </label>
-            <Mail className="pointer-events-none absolute left-[5.5%] top-[20.5%] z-10 h-[15%] w-auto text-white/0" />
-            <input
-              id="mobile-reference-email"
-              type="email"
-              required
-              placeholder="Email address"
-              className="absolute inset-x-0 top-0 h-[45%] w-full rounded-[1vw] border border-transparent bg-transparent pl-[13%] pr-[4%] text-[clamp(0.6rem,2.8vw,1rem)] font-semibold text-white outline-none placeholder:text-transparent transition focus:border-fuchsia-200/70 focus:bg-white/[0.08] focus:shadow-[0_0_18px_rgba(255,42,184,0.38)]"
-            />
-            <button
-              type="submit"
-              className="absolute inset-x-0 bottom-0 flex h-[43%] items-center justify-center rounded-[1vw] border border-transparent bg-transparent text-transparent transition focus:outline-none focus:ring-2 focus:ring-fuchsia-100/80"
-            >
-              <span>Join the Newsletter</span>
-              <ArrowRight className="ml-2" size={14} />
-            </button>
-          </form>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
