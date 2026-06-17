@@ -13,7 +13,7 @@ export function HeroSection() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_76%_34%,rgba(255,42,184,0.2),transparent_34%)]" />
 
       <div className="mx-auto grid min-h-[calc(100vh-4rem)] w-full max-w-[1210px] items-center gap-7 lg:grid-cols-[minmax(0,1.08fr)_minmax(430px,0.92fr)] lg:gap-8 xl:gap-10">
-        <div className="relative mx-auto flex w-full max-w-[620px] items-center justify-center lg:ml-auto lg:mr-0 lg:max-w-[670px]">
+        <div className="order-2 relative mx-auto flex w-full max-w-[620px] items-center justify-center lg:order-1 lg:ml-auto lg:mr-0 lg:max-w-[670px]">
           <img
             src="/hero-left-visual.png"
             alt="Creator's Edge travel newsletter preview"
@@ -21,7 +21,7 @@ export function HeroSection() {
           />
         </div>
 
-        <div className="mx-auto w-full max-w-[520px] rounded-[1.35rem] border border-white/14 bg-[#12042f]/28 p-5 text-center shadow-[0_20px_72px_rgba(6,2,24,0.3)] backdrop-blur-sm sm:p-7 lg:mx-0 lg:p-7 lg:text-left">
+        <div className="order-1 mx-auto w-full max-w-[520px] rounded-[1.35rem] border border-white/14 bg-[#12042f]/28 p-5 text-center shadow-[0_20px_72px_rgba(6,2,24,0.3)] backdrop-blur-sm sm:p-7 lg:order-2 lg:mx-0 lg:p-7 lg:text-left">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-fuchsia-400/90 bg-[#12042f]/70 px-4 py-2 text-xs font-black text-fuchsia-300 shadow-[0_0_16px_rgba(255,42,184,0.36)] backdrop-blur-md sm:text-sm">
             <Zap size={15} />
             Free Newsletter
