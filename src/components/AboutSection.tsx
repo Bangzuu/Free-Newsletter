@@ -32,7 +32,7 @@ export function AboutSection() {
           </h2>
         </div>
 
-      <div className="grid gap-6 sm:gap-10 lg:grid-cols-[340px_minmax(0,1fr)] lg:items-start lg:gap-12 xl:grid-cols-[360px_minmax(0,1fr)]">
+      <div className="grid gap-6 sm:gap-10 lg:grid-cols-[340px_minmax(0,1fr)] lg:items-stretch lg:gap-12 xl:grid-cols-[360px_minmax(0,1fr)]">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -51,6 +51,7 @@ export function AboutSection() {
         </motion.div>
 
         <motion.div
+          className="lg:flex lg:h-[548px] lg:flex-col xl:h-[588px]"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
@@ -64,11 +65,11 @@ export function AboutSection() {
             </span>
           </h2>
 
-          <div className="mt-0 grid gap-3 md:grid-cols-2 lg:mt-4 lg:gap-3">
+          <div className="mt-0 grid gap-3 md:grid-cols-2 lg:mt-4 lg:flex-1 lg:grid-rows-[auto_minmax(0,1fr)] lg:gap-3">
             <InfoCard title="About Me" icon={UserRound} compact className="md:col-span-2">
               <div className="grid gap-5 md:grid-cols-2">
                 <p>
-                  I&apos;m George - also known as Trippin with George. Over the past four years, I&apos;ve travelled the world,
+                  I&apos;m George - also known as Trippin wit George. Over the past four years, I&apos;ve travelled the world,
                   created content, experimented with different ways of earning online and learned a lot about what it really
                   takes to build a more independent life.
                 </p>
@@ -79,7 +80,7 @@ export function AboutSection() {
               </div>
             </InfoCard>
 
-            <InfoCard title="What You'll Get" icon={Send} compact>
+            <InfoCard title="What You'll Get" icon={Send} compact className="lg:h-full">
               <p className="mb-2 font-black text-slate-800">Honest, useful ideas on:</p>
               <ul className="space-y-1">
                 {list.map((item) => (
@@ -91,7 +92,7 @@ export function AboutSection() {
               </ul>
             </InfoCard>
 
-            <InfoCard title="Why I'm Writing It" icon={Heart} compact>
+            <InfoCard title="Why I'm Writing It" icon={Heart} compact className="lg:h-full">
               <p className="mb-2 font-black text-slate-800">I&apos;m building this life as I go.</p>
               <p>
                 This is where I share the lessons, experiments, mistakes and breakthroughs that might help you build yours.

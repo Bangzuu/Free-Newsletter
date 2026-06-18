@@ -1,6 +1,32 @@
-import { ArrowRight, Mail, ShieldCheck, UsersRound, Zap } from "lucide-react";
+import { type FormEvent, useState } from "react";
+import { ArrowRight, Loader2, Mail, ShieldCheck, UsersRound, Zap } from "lucide-react";
 
 export function HeroSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (isSubmitting) return;
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    setIsSubmitting(true);
+
+    try {
+      await fetch(form.action, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
+      });
+
+      window.location.assign("/thank-you");
+    } catch {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section className="relative isolate min-h-screen overflow-hidden bg-[#08041c] px-4 py-8 text-white sm:px-8 lg:px-10 lg:py-8">
       <img
@@ -43,6 +69,7 @@ export function HeroSection() {
           <form
             method="post"
             action="https://systeme.io/embedded/41883843/subscription"
+            onSubmit={handleSubmit}
             className="mx-auto mt-5 flex w-full max-w-[470px] flex-col gap-3 sm:flex-row lg:mx-0"
             aria-label="Join the newsletter"
           >
@@ -62,10 +89,20 @@ export function HeroSection() {
             </div>
             <button
               type="submit"
+              disabled={isSubmitting}
               className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-fuchsia-500 px-5 text-base font-bold text-white shadow-[0_0_24px_rgba(255,42,184,0.4)] transition hover:bg-fuchsia-400 focus:outline-none focus:ring-2 focus:ring-fuchsia-100 sm:min-h-11 sm:text-sm"
             >
-              <span>Join the Newsletter</span>
-              <ArrowRight size={16} />
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="animate-spin" size={16} />
+                  <span>Joining...</span>
+                </>
+              ) : (
+                <>
+                  <span>Join the Newsletter</span>
+                  <ArrowRight size={16} />
+                </>
+              )}
             </button>
           </form>
 
