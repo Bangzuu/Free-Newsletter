@@ -51,7 +51,7 @@ export function AboutSection() {
         </motion.div>
 
         <motion.div
-          className="lg:flex lg:h-[548px] lg:flex-col xl:h-[588px]"
+          className="lg:flex lg:h-[548px] lg:flex-col lg:pt-8 xl:h-[588px] xl:pt-10"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
