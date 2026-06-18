@@ -21,7 +21,7 @@ export function HeroSection() {
         mode: "no-cors",
       });
 
-      window.location.assign("/thank-you");
+      window.location.assign("/?thank-you=1");
     } catch {
       setIsSubmitting(false);
     }

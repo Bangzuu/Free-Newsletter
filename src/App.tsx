@@ -3,7 +3,9 @@ import { HeroSection } from "./components/HeroSection";
 import { ThankYouPage } from "./components/ThankYouPage";
 
 export default function App() {
-  if (window.location.pathname === "/thank-you") {
+  const params = new URLSearchParams(window.location.search);
+
+  if (window.location.pathname === "/thank-you" || params.has("thank-you")) {
     return <ThankYouPage />;
   }
 
