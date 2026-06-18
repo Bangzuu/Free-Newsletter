@@ -41,6 +41,8 @@ export function HeroSection() {
           </p>
 
           <form
+            method="post"
+            action="https://systeme.io/embedded/41883843/subscription"
             className="mx-auto mt-5 flex w-full max-w-[470px] flex-col gap-3 sm:flex-row lg:mx-0"
             aria-label="Join the newsletter"
           >
@@ -52,6 +54,7 @@ export function HeroSection() {
               <input
                 id="hero-email"
                 type="email"
+                name="email"
                 required
                 placeholder="Email Address"
                 className="h-12 w-full rounded-md bg-transparent pl-11 pr-4 text-base font-semibold text-white outline-none placeholder:text-white/90 sm:h-11 sm:text-sm"
