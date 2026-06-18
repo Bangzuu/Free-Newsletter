@@ -51,13 +51,13 @@ export function AboutSection() {
         </motion.div>
 
         <motion.div
-          className="lg:flex lg:h-[548px] lg:flex-col lg:pt-8 xl:h-[588px] xl:pt-10"
+          className="lg:flex lg:h-[548px] lg:flex-col xl:h-[588px]"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="hidden max-w-[650px] font-serif text-[clamp(1.85rem,2.45vw,2.55rem)] font-black leading-[0.94] tracking-normal text-slate-950 lg:block">
+          <h2 className="hidden max-w-[650px] font-serif text-[clamp(1.85rem,2.45vw,2.55rem)] font-black leading-[0.94] tracking-normal text-slate-950 lg:mt-4 lg:block xl:mt-6">
             I spent four years travelling the world. Now I&apos;m building the kind of business that lets me{" "}
             <span className="relative inline-block">
               keep doing it.
@@ -65,7 +65,7 @@ export function AboutSection() {
             </span>
           </h2>
 
-          <div className="mt-0 grid gap-3 md:grid-cols-2 lg:mt-4 lg:flex-1 lg:grid-rows-[auto_minmax(0,1fr)] lg:gap-3">
+          <div className="mt-0 grid gap-3 md:grid-cols-2 lg:mt-4 lg:min-h-0 lg:flex-1 lg:grid-rows-[auto_minmax(0,1fr)] lg:gap-3">
             <InfoCard title="About Me" icon={UserRound} compact className="md:col-span-2">
               <div className="grid gap-5 md:grid-cols-2">
                 <p>
