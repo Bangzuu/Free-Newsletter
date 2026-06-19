@@ -35,15 +35,16 @@ export function ThankYouPage() {
           </div>
 
           <h1 className="mx-auto max-w-[650px] font-serif text-[clamp(2.45rem,11vw,4.85rem)] font-black leading-[0.98] tracking-normal text-white drop-shadow-[0_4px_12px_rgba(4,0,24,0.78)]">
-            Lovely. Check your inbox.
+            Lovely. Please check your inbox...
           </h1>
 
           <div className="mx-auto mt-6 max-w-[590px] space-y-5 text-base font-semibold leading-7 text-white/90 drop-shadow-[0_2px_10px_rgba(4,0,24,0.7)] sm:text-lg sm:leading-8">
             <p>I&apos;ve just sent you a quick welcome email.</p>
             <p>
-              If it lands in Spam or Promotions, please move it into your Primary inbox. That would be an absolute dream.
+              If it lands in Spam or Promotions, please can you move it into your Primary inbox? If so, that&apos;d be an
+              absolute dream.
             </p>
-            <p>Also, feel free to hit reply and tell me:</p>
+            <p>Also, feel free to &quot;hit reply&quot; and tell me:</p>
             <p className="font-black text-white">
               What are your goals right now? What are you working towards?
             </p>
@@ -68,7 +69,7 @@ export function ThankYouPage() {
           </div>
 
           <div className="mx-auto mt-9 max-w-[520px] text-base font-bold leading-7 text-white sm:text-lg">
-            <p>Excited to connect.</p>
+            <p>Excited to connect!</p>
             <p className="mt-2 text-fuchsia-200">-George</p>
           </div>
         </div>
